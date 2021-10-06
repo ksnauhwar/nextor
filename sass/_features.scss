@@ -1,0 +1,28 @@
+.features{
+ grid-column:center-start/center-end;
+ margin:15rem 0;
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(25rem,1fr));
+ grid-gap:6rem;
+ align-items:start; //this ensures that all the feature texts are align properly
+}
+
+
+.feature{
+  display:grid;
+  grid-template-columns:min-content 1fr;
+  grid-row-gap:1.5rem;
+  grid-column-gap:2.5rem;
+  
+  &__icon{
+   fill:$color-primary;
+   width:4.5rem;
+   height:4.5rem;
+   grid-row:1/span 2;//here we use span 2 and not -1 because -1 marks the end of the explicit grid which in this case is 1(row) by 2(column)
+   transform:translateY(-1rem);
+  }
+  
+  &__text{
+   font-size:1.7rem;
+  }
+}
